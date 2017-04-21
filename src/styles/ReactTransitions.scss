@@ -1,0 +1,97 @@
+/* MIXINS */
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+/* ADDING A BEAR */
+.bearlistAni-enter {
+  opacity: 0.01;
+  height: 0px;
+}
+
+.bearlistAni-enter.bearlistAni-enter-active {
+  opacity: 1;
+   height: auto;
+  @include transition(opacity 500ms ease-in);
+}
+
+.bearlistAni-leave {
+  opacity: 1;
+}
+
+.bearlistAni-leave.bearlistAni-leave-active {
+  opacity: 0.01;
+  @include transition(opacity 300ms ease-in);
+}
+
+/* LIKING A BEAR */
+.bearlikeAni-enter {
+  opacity: 0.01;
+
+}
+
+.bearlikeAni-enter.bearlikeAni-enter-active {
+  opacity: 0;
+ 
+  @include transition(opacity 500ms ease-in);
+}
+
+.bearlikeAni-leave {
+  opacity: 1;
+}
+
+.bearlikeAni-leave.bearlikeAni-leave-active {
+  opacity: 0.01;
+  @include transition(opacity 300ms ease-in);
+}
+
+/* Adding A BEAR */
+.addBearFormAni-enter {
+  opacity: 0.01;
+  bottom:-25px;
+}
+
+.addBearFormAni-enter.addBearFormAni-enter-active {
+  opacity: 1;
+  
+   bottom: 0px;
+  @include transition(all 500ms ease-in);
+}
+
+.addBearFormAni-leave {
+  opacity: 1;
+}
+
+.addBearFormAni-leave.addBearFormAni-leave-active {
+  opacity: 0.01;
+  @include transition (opacity 300ms ease-in);
+}
+
+
+/* Adding A Comment */
+.commentlistAni-enter {
+  opacity: 0.01;
+  bottom:-25px;
+}
+
+.commentlistAni-enter.commentlistAni-enter-active {
+  opacity: 1;
+  
+   bottom: 0px;
+  @include transition (all 500ms ease-in);
+}
+
+.commentlistAni-leave {
+  opacity: 1;
+}
+
+.commentlistAni-leave.commentlistAni-leave-active {
+  opacity: 0.01;
+  @include transition (opacity 300ms ease-in);
+}
